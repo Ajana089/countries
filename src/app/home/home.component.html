@@ -1,0 +1,43 @@
+<div class="container">
+<div class="country" >
+
+
+<h2>Countries</h2>
+<a routerLink="all">All</a>
+<a routerLink="asia">Asia</a>
+<a routerLink="">Europe</a>
+
+</div>
+<div   *ngFor="let i of country">
+
+    <!-- <img class="imgsize"  [src]="i.flag" >
+    {{i.name}} <br>
+    {{i.region}} -->
+    <div class="row">
+        <!-- <div class="col-sm-3 mb-3 mb-sm-0"> -->
+          <div class="card">
+            <div class="card-body">
+
+                <div class="row align-items-start">
+                    <div class="col">
+                
+            <img [src]="i.flag" class="card-img-top imgsize" alt="...">
+                
+                
+        </div>
+            <div class="col">
+              <h4 class="card-text"><b>{{i.name}}</b>b</h4>
+              <h5 class="card-text">{{i.region}}</h5>
+            </div>
+        </div>
+             
+            </div>
+          </div>
+        <!-- </div> -->
+        
+      </div>
+    
+
+</div>
+</div>
+<router-outlet></router-outlet>

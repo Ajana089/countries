@@ -1,0 +1,24 @@
+.container{
+    flex-wrap:row;
+}
+a{
+    text-decoration: none;
+    padding-right: 30px;
+}
+.country{
+    text-align: center;
+}
+.flag{
+
+width:100px;
+height:100px;
+border-radius: 1px solid black;
+
+}
+.imgsize{
+    width:80px;
+    height:80px;
+    padding :10px
+}
+
+

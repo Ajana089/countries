@@ -1,0 +1,55 @@
+<!-- <div class="login">
+
+    <div class="forms">
+    <h3>Sign In </h3>
+<h5>New User?<a routerLink="login">Crete an account</a></h5>
+<div>
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+    <input type="text" placeholder="Email"  formControlName="username"><br>
+    <input type="password" placeholder="password" formControlName="password"><br>
+    <button type="submit">LOGIN</button>
+</form>
+</div>
+
+<div *ngIf="messgevalue">
+    <h5 class="message">{{message}}</h5>
+</div>
+</div>
+</div> -->
+ <div class="login">
+    <h3>Sign In </h3>
+    <h5>New User?<a routerLink="login">Crete an account</a></h5>
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  formControlName="username">
+      <span class="message" *ngIf="username && username.invalid && username.touched"> Email address</span>
+     
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
+
+      <span class="message" *ngIf="password && password.invalid && password.touched">Password</span>
+    </div>
+    <div *ngIf="messgevalue">
+        <h5 class="message">{{message}}</h5>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" [disabled]="!loginForm.valid" class=" button btn btn-dark">LOGIN</button>
+  </form>
+
+  <div class="line"></div>
+  <div class="or">---------Or SignIn With----------</div>
+  <div class="pic">
+    <a href="https://www.facebook.com/"><img class="smallic" src="../assets/fa.avif" alt=""></a>
+    <a href="https://www.instagram.com/"><img class="smallic" src="../assets/Instagram_icon.png.webp" alt=""></a>
+    <a href="https://twitter.com/"><img class="smallic" src="../assets/Logo_of_Twitter.svg.png" alt=""></a>
+
+  </div>
+  
+  </div>
+
